@@ -1,32 +1,37 @@
-// Function to handle page navigation
-function showPage(pageId) {
-    // Hide all pages
-    const pages = document.querySelectorAll('.page');
-    pages.forEach(page => page.classList.remove('active'));
-
-    // Show selected page
-    const activePage = document.getElementById(pageId);
-    if (activePage) {
-        activePage.classList.add('active');
-    }
-
-    // Scroll to top
-    window.scrollTo(0, 0);
-}
-
-// Update Year in Footer
-document.getElementById('year').textContent = new Date().getFullYear();
-
 // Initialize Lucide Icons
 lucide.createIcons();
 
-// Simple Solar Background Movement
-const solarBg = document.getElementById('solarBg');
-let pos = 50;
-let direction = 1;
+// Page Navigation Logic
+function showPage(pageId) {
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(page => page.classList.remove('active'));
 
-setInterval(() => {
-    pos += 0.05 * direction;
-    if (pos > 52 || pos < 48) direction *= -1;
-    solarBg.style.backgroundPosition = `${pos}% ${100 - pos}%`;
-}, 50);
+    const targetPage = document.getElementById(pageId);
+    if (targetPage) {
+        targetPage.classList.add('active');
+    }
+
+    // Close mobile menu if open
+    const navLinks = document.getElementById('navLinks');
+    if (navLinks.classList.contains('mobile-active')) {
+        toggleMenu();
+    }
+
+    window.scrollTo(0, 0);
+}
+
+// Mobile Menu Toggle
+function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    const menuIcon = document.getElementById('menuIcon');
+    
+    navLinks.classList.toggle('mobile-active');
+    
+    const isOpen = navLinks.classList.contains('mobile-active');
+    menuIcon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
+    
+    lucide.createIcons(); // Refresh icons
+}
+
+// Set Copyright Year
+document.getElementById('year').textContent = new Date().getFullYear();

@@ -22,13 +22,18 @@
                     <span>LLP</span>
                 </div>
             </div>
-            <div class="nav-links">
+            
+            <div class="nav-links" id="navLinks">
                 <button onclick="showPage('home')" class="nav-btn">Home</button>
                 <button onclick="showPage('services')" class="nav-btn">Services</button>
                 <button onclick="showPage('startup')" class="nav-btn">Startup</button>
                 <button onclick="showPage('leadership')" class="nav-btn">Leadership</button>
                 <button onclick="showPage('contact')" class="nav-btn">Contact</button>
             </div>
+
+            <button class="mobile-menu-toggle" onclick="toggleMenu()">
+                <i data-lucide="menu" id="menuIcon"></i>
+            </button>
         </nav>
 
         <main id="main-content">
@@ -63,7 +68,7 @@
                             <ul>
                                 <li>LLP Act 2008 Compliance</li>
                                 <li>Independent Technical Audits</li>
-                                <li>High-Precision Calibration</li>
+                                <li>NABL Calibration Standards</li>
                                 <li>Data Integrity Protocols</li>
                             </ul>
                         </div>
@@ -73,7 +78,7 @@
                                 <li>Pan-India Service Support</li>
                                 <li>Remote Technical Advisory</li>
                                 <li>On-site Industrial Integration</li>
-                                <li>Global Space-Startup Mentoring</li>
+                                <li>Space-Startup Mentoring</li>
                             </ul>
                         </div>
                     </div>
@@ -86,17 +91,17 @@
                     <div class="service-card">
                         <i data-lucide="activity" class="card-icon"></i>
                         <h4>Healthcare Systems</h4>
-                        <p>Specialized in CSSD (Central Sterile Services Department) management. We handle installation, AMC, and NABL-standard validation for high-pressure autoclaves and ETO units.</p>
+                        <p>Specialized in CSSD management. We handle installation, AMC, and validation for high-pressure autoclaves and ETO units.</p>
                     </div>
                     <div class="service-card">
                         <i data-lucide="cpu" class="card-icon"></i>
                         <h4>Industrial Automation</h4>
-                        <p>End-to-end PLC/SCADA solutions. Custom logic development for manufacturing plants, ensuring maximum uptime and automated safety interlocks.</p>
+                        <p>End-to-end PLC/SCADA solutions. Custom logic development for manufacturing plants and automated safety interlocks.</p>
                     </div>
                     <div class="service-card">
                         <i data-lucide="rocket" class="card-icon"></i>
                         <h4>Aerospace Support</h4>
-                        <p>Specialized technical manpower and inspection services for aerospace components. We provide the bridge between design and flight-readiness.</p>
+                        <p>Specialized technical manpower and inspection services for aerospace components and flight-readiness assurance.</p>
                     </div>
                 </div>
             </section>
@@ -105,12 +110,10 @@
                 <div class="startup-content">
                     <h3 class="section-title">Space Startup Support</h3>
                     <div class="startup-box">
-                        <p class="text-large">
-                            Moving from a prototype to a launch-ready satellite or rocket is complex. Our <strong>Mission-Ready Programme</strong> provides:
-                        </p>
+                        <p class="text-large">Our <strong>Mission-Ready Programme</strong> provides:</p>
                         <ul class="startup-list">
                             <li>TRL (Technology Readiness Level) Assessment</li>
-                            <li>Subsystem Environmental Qualification (Vibration/Thermal)</li>
+                            <li>Subsystem Environmental Qualification</li>
                             <li>Engineering Governance & Quality Control</li>
                             <li>Final Design Review (FDR) Support</li>
                         </ul>
@@ -125,13 +128,13 @@
                         <div class="avatar">SK</div>
                         <h4>Sunil Kumar</h4>
                         <p class="role">Designated Partner</p>
-                        <p class="desc">Leading Healthcare Systems and Medical Infrastructure Operations.</p>
+                        <p>Healthcare Systems & Medical Infrastructure</p>
                     </div>
                     <div class="service-card text-center">
                         <div class="avatar">GP</div>
                         <h4>Geetanjali Patil</h4>
                         <p class="role">Designated Partner</p>
-                        <p class="desc">Expert in Reliability Engineering and Space Systems Governance.</p>
+                        <p>Reliability Engineering & Space Systems</p>
                     </div>
                 </div>
             </section>
@@ -142,24 +145,15 @@
                     <div class="contact-card">
                         <div class="contact-item">
                             <i data-lucide="phone"></i>
-                            <div>
-                                <strong>Phone</strong>
-                                <p>+91 81519 90909</p>
-                            </div>
+                            <div><strong>Phone</strong><p>+91 81519 90909</p></div>
                         </div>
                         <div class="contact-item">
                             <i data-lucide="mail"></i>
-                            <div>
-                                <strong>Email</strong>
-                                <p>astrovoltglobal@gmail.com</p>
-                            </div>
+                            <div><strong>Email</strong><p>astrovoltglobal@gmail.com</p></div>
                         </div>
                         <div class="contact-item">
                             <i data-lucide="map-pin"></i>
-                            <div>
-                                <strong>Headquarters</strong>
-                                <p>Bengaluru, India</p>
-                            </div>
+                            <div><strong>Headquarters</strong><p>Bengaluru, India</p></div>
                         </div>
                     </div>
                 </div>
